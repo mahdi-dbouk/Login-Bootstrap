@@ -20,7 +20,6 @@
     });
 
     login_btn.addEventListener('click',function(e){
-        e.preventDefault();
         register_btn.classList.replace('btn-primary','btn-secondary');
         login_btn.classList.replace('btn-secondary','btn-primary');
         confirm_input.style.display="none";
@@ -28,3 +27,18 @@
         form_title.innerHTML="Login&#128274;"
 
     });
+
+    login_btn.addEventListener("submit", login);
+
+let user_details = []
+
+function login() {
+  fetch("http://localhost/Mini-Full-Stack-Backend/login.php")
+    .then((response) => response.json())
+    .then((details) => {
+      user_details = details;
+    })
+    .catch((error) => console.log(error))
+}
+
+console.log(user_details);
