@@ -6,29 +6,38 @@
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
- 
-    <div class="container vh-100 d-flex justify-content-md-center align-items-md-center">
-            <div class="row d-flex justify-content-md-center" style="width: 24%;">
-                    <div class="col bg-dark p-4 border border-3">
-                        <form>
-                            <div class="mt-2">
-                                    <input type="email" class="form-control" placeholder="Email">
-                            <div class="mt-2">
-                                <input type="password" class="form-control" placeholder="Password">
-                            </div>
-                            <div id="Confirm-Password" class="mt-2 collapse show">
-                                <input type="password" class="form-control" placeholder="Confirm Password">
-                            </div>
-                            <div class="mx-4 d-flex justify-content-center">
-                                <button type="submit" class="btn btn-primary btn-md m-2">Login</button>
-                                <button type="submit" class="btn btn-secondary btn-md m-2" data-toggle="show" data-target="#Confirm-Password">Register</button>
-                            </div>
-                        </form>
+<body class="container vh-100 bg-dark">
+    <div class="container vh-100 d-flex flex-row align-items-md-center">
+        <div class="container d-flex flex-row justify-content-center align-items-center">
+            <div class="col-md-5 p-4 border border-3 rounded-3 bg-light">
+                <form class="d-flex flex-column">
+                    <h3 class="text-center mb-3" id="form-title">Login&#128274;</h3>
+                    <div class="form-floating mb-3">
+                        <input type="name" class="form-control" id="name-input" placeholder="Name">
+                        <label for="name-input">Name</label>
                     </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email-input" placeholder="Email">
+                        <label for="email-input">Email Address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="password-input" placeholder="Password">
+                        <label for="password-input">Password</label>
+                    </div>
+                    <div id="Confirm-Password" class="form-floating mb-3 collapse show">
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
+                        <label for="confirm-password">Confirm Password</label>
+                    </div>
+                    <div class="mt-auto d-flex flex-row justify-content-around">
+                        <button class="btn btn-primary flex-grow-1 btn-lg m-2"   id="signin-btn">Login</button>
+                        <button class="btn btn-secondary flex-grow-1 btn-lg m-2" id="register-btn">Register</button>
+                    </div>
+                </form>
             </div>
+        </div>
     </div>
     
+    <script src="./src/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
